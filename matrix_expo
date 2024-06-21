@@ -1,0 +1,53 @@
+def matrix_exponentiation(num_fb:int) -> list:
+    emp_lst=[]
+    n=[[1,1,0],[1,0,0],[0,0,0]]
+    matrix=n
+    for k in range(num_fb):
+        for i in range(n):
+            for j in range(n):
+                print(n[i][j],n[j][i])
+                c.append(n[i][j]*n[j][i])
+                if len(c)!=3:
+                    continue
+                else:
+                    matrix.append(c)
+                    c=[]
+    e=[]
+    fib_3=[1,1,0]
+    fib_n_matrix=[]
+    for i in range(len(matrix)):
+        for j in range(len(matrix)):
+            print(matrix[i][j],fib_3[j])
+            e.append(matrix[i][j]*fib_3[j])
+            if len(e) != 3:
+                continue
+            else:
+                fib_n_matrix.append(e)
+                e=[]
+
+""" n=[[1, 1, 1], [1, 0, 0], [0, 1, 0]]
+matrix=n
+c=[]
+for _ in range(6):
+    for i in range(3):
+        matrix_1=[matrix[i]]
+        for j in range(3):            
+            for k in range(len(matrix_1)):
+                print(matrix_1[j][k],n[j][i])
+                c.append(matrix_1[j][k]*n[j][i])
+            if len(c)!=3:
+                continue
+            else:
+                matrix.append(c)
+                c=[]
+                    
+n=matrix
+print(matrix)
+fib_mat=[matrix.remove(i) for i in matrix[0:3]]
+
+b=-1
+if b in (-1,1):
+    print(True)
+else:
+    print(False)
+"""
